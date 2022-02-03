@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Page-practice</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="left-nav">
+                <h1>Profile</h1>
+                <a href="#">Home</a>
+                <a href="#">My Profile</a>
+                <a href="#">Find Connections</a>
+            </div>
+            <div class="right-nav">
+                <button>Sign Out</button>
+            </div>
+        </header>
+
+        <div class="contents">
+            <div class="column-1">
+                <div class="content-box profile">
+                    <div class="profile-header"></div>
+                    <div class="profile-detail">
+                        <div class="profile-image">
+                            <img src="images/anne-s.jpg" alt="Anne-photo">
+                        </div>
+                        <h2 id="user-name">Annie Jung</h2>
+                        <div class="location">
+                            <img src="icons/map-marker.png" alt="map marker">
+                            <p>Sunnyvale, CA</p>
+                        </div>
+                        <div class="profile-desc">
+                            <p>
+                                Developer|Engineer|Problem Solver
+                                <br>
+                                Master of shadows and the Internet!
+                            </p>
+                        </div>
+                        <div class="edit-profile">
+                            <img src="icons/gear.png" alt="geer-icon">
+                            <a href="#" onclick="editName('#user-name')">edit profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box education">
+                    <div class="small-header">
+                        <p>Education</p>
+                    </div>
+                    <div class="education-detail">
+                        <h3>Coding Dojo - Full Stack Bootcamp</h3>
+                        <p>Jan 2022 - April 2022</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Unde doloribus itaque vitae odio, dolor velit fugit,
+                            doloremque officiis quia ratione iusto harum veritatis
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column-2">
+                <div class="content-box connection-request">
+                    <div class="small-header">
+                        <button id="counter">2</button>
+                        <p>Connection Requests</p>
+                    </div>
+                    <div class="request-content">
+                        <div id="request1" class="request-list">
+                            <div class="request-item">
+                                <img src="images/todd-s.jpg" alt="Tod image">
+                                <p>Tod S</p>
+                            </div>
+                            <div class="request-decision">
+                                <button onclick="removeRequest('#request1'); addNumber('#count-con')"><img
+                                        src="icons/accept-circle.png" alt="Accept" class="decision-icon"></button>
+                                <button onclick="removeRequest('#request1')"><img src="icons/close-circle.png"
+                                        alt="Close" class="decision-icon"></button>
+                            </div>
+                        </div>
+                        <div id="request2" class="request-list">
+                            <div class="request-item">
+                                <img src="images/phil-s.jpg" alt="Phil image">
+                                <p>Phil S</p>
+                            </div>
+                            <div class="request-decision">
+                                <button onclick="removeRequest('#request2'); addNumber('#count-con')"><img
+                                        src="icons/accept-circle.png" alt="Accept" class="decision-icon"></button>
+                                <button onclick="removeRequest('#request2')"><img src="icons/close-circle.png"
+                                        alt="Close" class="decision-icon"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box your-connections">
+                    <div class="small-header">
+                        <button id="count-con">500</button>
+                        <p>Your Connections</p>
+                    </div>
+                    <div class="connection-list">
+                        <div class="connection-item">
+                            <img src="images/arry-s.jpg" alt="Arry Image">
+                            <p>Arry S</p>
+                        </div>
+                        <div class="connection-item">
+                            <img src="images/jane-m.jpg" alt="Jane Image">
+                            <p>Jane M</p>
+                        </div>
+                        <div class="connection-item">
+                            <img src="images/adrien-s.jpg" alt="Adrien Image">
+                            <p>Adrien S</p>
+                        </div>
+                        <div class="connection-item">
+                            <img src="images/alayne-s.jpg" alt="Alayne Image">
+                            <p>Alayen S</p>
+                        </div>
+                    </div>
+                    <div class="connection-footer">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
